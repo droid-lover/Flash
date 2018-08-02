@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Flash </string>
+    <string name="app_description">when Android meets RxJava</string>
+    <string name="mechanic">by Sachin Rajput</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
