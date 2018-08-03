@@ -19,8 +19,8 @@
         app:tabIndicatorColor="@color/colorPrimaryDark"
         app:tabMode="scrollable"
         app:tabSelectedTextColor="@color/colorPrimaryText"
-        app:tabTextColor="@color/colorDividerText"
-        app:tabTextAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+        app:tabTextAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        app:tabTextColor="@color/colorDividerText" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"

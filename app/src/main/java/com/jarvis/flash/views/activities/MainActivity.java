@@ -26,7 +26,6 @@ import io.reactivex.disposables.CompositeDisposable;
 
 public class MainActivity extends AppCompatActivity implements IGetAudioView, MediaPlayer.OnErrorListener, MediaPlayer.OnPreparedListener {
 
-    private final String TAG = MainActivity.class.getName();
     private CompositeDisposable disposable = new CompositeDisposable();
     private IGetAudioPresenter mIGetAudioPresenter;
     private AudioAdapter mAudioAdapter;
@@ -59,7 +58,6 @@ public class MainActivity extends AppCompatActivity implements IGetAudioView, Me
         mIGetAudioPresenter.getAudioList();
     }
 
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -76,12 +74,10 @@ public class MainActivity extends AppCompatActivity implements IGetAudioView, Me
 
     @Override
     public void getAudioError(String error) {
-        Log.d(TAG, "data=" + error);
     }
 
     private void setUpAudioLayout(AudioList audioList) {
         if (audioList != null) {
-            Log.d(TAG, "data=" + new Gson().toJson(audioList));
             settingUI(audioList);
         }
     }
@@ -102,7 +98,6 @@ public class MainActivity extends AppCompatActivity implements IGetAudioView, Me
             mediaPlayer = null;
             mediaPlayer = new MediaPlayer();
         }
-        Log.d("playAudio", "audio=" + pos);
         mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
         try {
             mediaPlayer.setDataSource(mAudioList.getData().get(pos).getAudio());
@@ -118,7 +113,6 @@ public class MainActivity extends AppCompatActivity implements IGetAudioView, Me
         }
     }
 
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -131,15 +125,12 @@ public class MainActivity extends AppCompatActivity implements IGetAudioView, Me
                     e.printStackTrace();
                 }
             }
-
             @Override
             public void onPageSelected(int position) {
-
             }
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
             }
         });
     }
